@@ -11,11 +11,11 @@ class TweetsController < ApplicationController
   def create
     tweet = Tweet.new(tweet_params)
     if tweet.save
-      message =  {success: 'tweet created'}
+      redirect_to tweets_path
     else
       message =  {error: tweet.errors.full_messages.to_sentence}
+      redirect_to new_tweet_path, flash: message
     end
-    redirect_to tweets_path, flash: message
   end
 
   private

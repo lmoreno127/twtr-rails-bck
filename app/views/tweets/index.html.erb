@@ -1,13 +1,27 @@
-<h1>TWEETS</h1>
+<div class="twt-container">
 
-<% @tweets.each do |tweet| %>
-  <div class="">
-    <p>
-      <%= tweet.body %>
-    </p>
-    <span>
-      <i><%= tweet.created_at %></i>
-    </span>
+  <div class="twt-header">
+    <span>TWEETS</span>
+
+    <%= link_to new_tweet_path do %>
+      <span class="twt-btn">
+        New Tweet
+      </span>
+    <% end %>
   </div>
 
-<% end %>
+  <div class="">
+    <% @tweets.each do |tweet| %>
+    <div class="twt-content">
+      <span>
+        <i><%= time_ago_in_words(tweet.created_at) %></i>
+      </span>
+      <p>
+        <%= tweet.body %>
+      </p>
+    </div>
+
+    <% end %>
+  </div>
+
+</div>

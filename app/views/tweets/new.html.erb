@@ -1,8 +1,22 @@
-<h1>New Tweet</h1>
 
-<%= form_for @tweet do |form| %>
-  <%= form.text_field :body %><br />
-  <div class="">
-    <%= form.submit %>
+<div class="twt-container">
+  <div class="twt-header-compose">
+    <%= link_to tweets_path, class: 'w-30' do %>
+      <span class="bck-btn">
+        Back
+      </span>
+    <% end %>
+    <span>COMPOSE NEW TWEET</span>
+    <span class="w-30">
+    </span>
   </div>
-<% end %>
+
+  <div class="twt-content-new">
+    <%= form_for @tweet do |form| %>
+      <%= form.text_area :body , cols: '80', rows: '5', placeholder: "What's happening?"%><br />
+      <div class="">
+        <%= form.submit 'Tweet', class: 'twt-btn' %>
+      </div>
+    <% end %>
+  </div>
+</div>

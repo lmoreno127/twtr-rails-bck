@@ -13,3 +13,72 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+  background-color: #e6ecf1;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100vw;
+  height: 100vh;
+}
+
+.twt-container {
+  margin: 0 auto;
+  width: 35%;
+  border-radius: 5px;
+}
+
+.twt-header,
+.twt-content,
+.twt-header-compose,
+.twt-content-new {
+  background-color: white;
+  border: 1px solid #e6ecf1;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.twt-header {
+  font-size: 18px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+}
+
+.twt-content:hover {
+  background-color: #f3f5f6;
+}
+
+.twt-header-compose {
+  display: flex;
+  justify-content: space-between;
+}
+form {
+  text-align: center;
+}
+
+.twt-btn {
+  background-color: #329cc3;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  border: transparent;
+  border-radius: 100px;
+  padding: 6px 16px;
+}
+.bck-btn {
+  background-color: red;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  border: transparent;
+  border-radius: 100px;
+  padding: 6px 16px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.w-30 {
+  width: 30%;
+}
