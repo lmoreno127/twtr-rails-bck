@@ -1,0 +1,13 @@
+<h1>TWEETS</h1>
+
+<% @tweets.each do |tweet| %>
+  <div class="">
+    <p>
+      <%= tweet.body %>
+    </p>
+    <span>
+      <i><%= tweet.created_at %></i>
+    </span>
+  </div>
+
+<% end %>

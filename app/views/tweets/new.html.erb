@@ -1,0 +1,8 @@
+<h1>New Tweet</h1>
+
+<%= form_for @tweet do |form| %>
+  <%= form.text_field :body %><br />
+  <div class="">
+    <%= form.submit %>
+  </div>
+<% end %>
