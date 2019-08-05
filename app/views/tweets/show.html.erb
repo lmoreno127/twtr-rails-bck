@@ -1,0 +1,33 @@
+<div class="twt-container">
+    
+  <div class="twt-header">
+  <%if user_signed_in?%>
+     <%= link_to "Sign Out",destroy_user_session_path%>
+    <%= link_to "Edit",edit_user_registration_path%>
+    <%= link_to "Tweets",tweets_path%>  
+  <%end %>
+    <span>TWEETS</span>
+
+    <%= link_to new_tweet_path do %>
+      <span class="twt-btn">
+        New Tweet
+      </span>
+    <% end %>
+  </div>
+
+  <div class="">
+    <% @user.tweets.each do |tweet| %>
+    <div class="twt-content">
+      <span>
+        <i><%= time_ago_in_words(tweet.created_at) %></i>
+        <i>@<%= tweet.user.username %></i>
+      </span>
+      <p>
+        <%= tweet.body %>
+      </p>
+    </div>
+
+    <% end %>
+  </div>
+
+</div>
